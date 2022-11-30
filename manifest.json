@@ -12,11 +12,11 @@
   "content_scripts": [
     {
       "matches": ["https://www.nytimes.com/crosswords/game/daily/"],
-      "js": ["replace.js"]
+      "js": ["src/replace.js"]
     },
     {
       "matches": ["*://*.nytimes.com/crosswords/game/daily/*"],
-      "js": ["pencil.js"]
+      "js": ["src/pencil.js"]
     }
   ]
 }
