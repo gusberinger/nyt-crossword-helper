@@ -10,6 +10,12 @@ const togglePencilMode = () => {
 	pencil.parentElement.click()
 }
 
+// auto clear the Ready To Get Started? dialogue if it is not sunday
+setTimeout(() => {
+	if (new Date().getDay() == 0) return
+	document.getElementsByClassName("pz-moment__button")[0].click()
+}, 200)
+
 window.addEventListener(
 	"keydown",
 	(event) => {
