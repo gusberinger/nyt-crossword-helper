@@ -2,7 +2,7 @@
 	"description": "Utility that offers quality of life changes for the New York Times crossword puzzle.",
 	"manifest_version": 2,
 	"name": "NYT Crossword Helper",
-	"version": "1.1",
+	"version": "1.2",
 	"homepage_url": "https://gusberinger.com/",
 	"icons": {
 		"48": "icons/logo-48.png"
