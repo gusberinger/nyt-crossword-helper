@@ -23,11 +23,10 @@ const route = async () => {
 		const html = await data.text()
 		const doc = new DOMParser().parseFromString(html, "text/html")
 		const times = doc.getElementsByClassName("times")[0]
-		console.log("times: ", times)
 		const [difficulty, solveTime, medianSolver] = [...times.children].map(
 			(element) => element.children[1].innerText
 		)
-		const statsText = `This puzzle is rated ${difficulty}. The median solver was ${medianSolver}, completing the puzzle in ${solveTime}`
+		const statsText = `This puzzle is rated ${difficulty}. The median solver was ${medianSolver}, in ${solveTime}.`
 		const statsDiv = document.createElement("div")
 		statsDiv.innerText = statsText
 		const bylineNode = document.getElementsByClassName(
