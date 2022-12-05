@@ -10,16 +10,14 @@ const togglePencilMode = () => {
 	pencil.parentElement.click()
 }
 
-// auto clear the Ready To Get Started? dialogue if it is not sunday
+// auto clear the Ready To Get Started? dialogue
 setTimeout(() => {
-	if (new Date().getDay() == 0) return
 	document.getElementsByClassName("pz-moment__button")[0].click()
 }, 200)
 
 const route = async () => {
 	const [year, month, day] = location.href.split("/").slice(6, 9).map(Number)
 	const url = `https://xwstats.com/puzzles/${year}-${month}-${day}`
-	// console.log()
 	try {
 		const data = await fetch(url)
 		const html = await data.text()
