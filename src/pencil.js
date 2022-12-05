@@ -10,12 +10,7 @@ const togglePencilMode = () => {
 	pencil.parentElement.click()
 }
 
-// auto clear the Ready To Get Started? dialogue
-setTimeout(() => {
-	document.getElementsByClassName("pz-moment__button")[0].click()
-}, 200)
-
-const route = async () => {
+const fetchXWStats = async () => {
 	const [year, month, day] = location.href.split("/").slice(6, 9).map(Number)
 	const url = `https://xwstats.com/puzzles/${year}-${month}-${day}`
 	try {
@@ -38,10 +33,12 @@ const route = async () => {
 	}
 }
 
-// setTimeout(route, 2000)
+const clearDialogue = () => {
+	document.getElementsByClassName("pz-moment__button")[0].click()
+}
 
-route()
-
+setTimeout(clearDialogue, 200)
+fetchXWStats()
 window.addEventListener(
 	"keydown",
 	(event) => {
