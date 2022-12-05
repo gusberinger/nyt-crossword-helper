@@ -17,5 +17,8 @@
 			"matches": ["*://*.nytimes.com/crosswords/game/daily/*"],
 			"js": ["src/pencil.js"]
 		}
+	],
+	"permissions": [
+		"https://xwstats.com/puzzles/*"
 	]
 }
